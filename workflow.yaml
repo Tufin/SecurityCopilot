@@ -1,0 +1,39 @@
+openapi: 3.0.0
+
+info:
+    title: Path calculation results using TOS
+    description: Path calculation results using TOS.
+    version: 1.0.0
+
+servers:
+#    - url: https://tos-pilot.tufin.com
+    - url: https://4c46-108-20-176-8.ngrok-free.app
+
+paths:
+    /ms-copilot/securechangeworkflow/api/securechange/workflows/active_workflows.json:
+        get:
+            operationId: ActiveWorkflowList
+            summary: Returns active workflow list defined in SecureChange.
+            responses:
+                200:
+                    description: OK
+                400:
+                    description: <TYPE> is not a valid workflow type
+    /ms-copilot/securechangeworkflow/api/securechange/workflows/active_workflows.json?type=ACCESS_REQUEST:
+        get:
+            operationId: AccessRequestWorkflows
+            summary: The Access-Request workflow can either allow or block traffic to a service from the source to the destination.
+            responses:
+                200:
+                    description: OK
+                400:
+                    description: <TYPE> is not a valid workflow type
+    /ms-copilot/securechangeworkflow/api/securechange/workflows/active_workflows.json?type=RULE_DECOMMISSION:
+        get:
+            operationId: RuleDecommissionWorkflows
+            summary: Rule decommission workflow list for mitigating security issues, such as disabling unused rules.
+            responses:
+                200:
+                    description: OK
+                400:
+                    description: <TYPE> is not a valid workflow type

@@ -1,0 +1,66 @@
+openapi: 3.0.0
+
+info:
+    title: Path calculation results using TOS
+    description: Path calculation results using TOS.
+    version: 1.0.0
+
+servers:
+#    - url: https://tos-pilot.tufin.com
+    - url: https://4c46-108-20-176-8.ngrok-free.app
+
+paths:
+    /ms-copilot/securetrack/api/topology/path.json:
+        get:
+            operationId: topologyPath
+            summary: Get path for specified traffic.
+            parameters:
+                -   $ref: '#/components/parameters/src'
+                -   $ref: '#/components/parameters/dst'
+                -   $ref: '#/components/parameters/srv'
+            responses:
+                200:
+                    description: Path calculation results
+                400:
+                    description: Value is missing or not valid
+    /ms-copilot/securetrack/api/devices/{deviceId}.json:
+        get:
+            operationId: UnusedRulesDeviceInformation
+            summary: Get device details based on the device id the way it is stored in SecureTrack.
+            parameters:
+                -   in: path
+                    name: deviceId
+                    required: true
+                    description: The device id to lookup for unused rules
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: OK
+
+components:
+    parameters:
+        src:
+            in: query
+            name: src
+            required: true
+            allowEmptyValue: false
+            schema:
+                type: string
+                default: 'any'
+        dst:
+            in: query
+            name: dst
+            required: true
+            allowEmptyValue: false
+            schema:
+                type: string
+                default: 'any'
+        srv:
+            in: query
+            name: service
+            required: true
+            allowEmptyValue: false
+            schema:
+                type: string
+                default: 'any'

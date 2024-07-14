@@ -1,0 +1,22 @@
+Descriptor:
+    Name: Tufin Firewall Management
+    DisplayName: Tufin Firewall Management
+    Description:  Get Information about your security network environment
+    SupportedAuthTypes:
+        - ApiKey
+    Authorization:
+        Type: APIKey
+        Key: Key
+        Location: Header
+        AuthScheme: ''
+
+SkillGroups:
+    -   Format: API
+        Settings:
+            OpenApiSpecUrl: https://raw.githubusercontent.com/tgratzi/SecCoPilot/master/topology.yaml
+    -   Format: API
+        Settings:
+            OpenApiSpecUrl: https://raw.githubusercontent.com/tgratzi/SecCoPilot/master/workflow.yaml
+    -   Format: API
+        Settings:
+            OpenApiSpecUrl: https://raw.githubusercontent.com/tgratzi/SecCoPilot/master/rules.yaml

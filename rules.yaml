@@ -1,15 +1,16 @@
 openapi: 3.0.0
 
 info:
-    title: Get unused rules using TOS
-    description: Get unused rules using TOS.
+    title: Path calculation results using TOS
+    description: Path calculation results using TOS.
     version: 1.0.0
 
 servers:
-    - url: https://86bd-108-20-176-8.ngrok-free.app/
+#    - url: https://tos-pilot.tufin.com
+    - url: https://4c46-108-20-176-8.ngrok-free.app
 
 paths:
-    /securetrack/api/rule_search.json?lasthitgreater:30%20rule.isdisabled:false%20action:allow:
+    /ms-copilot/securetrack/api/rule_search.json?lasthitgreater:30%20rule.isdisabled:false%20action:allow:
         get:
             operationId: UnusedRules
             summary: Shows the count of unused rules per device.
@@ -28,7 +29,7 @@ paths:
                                                 type: array
                 400:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search/{deviceId}.json?lasthitgreater:30%20rule.isdisabled:false%20action:allow:
+    /ms-copilot/securetrack/api/rule_search/{deviceId}.json?lasthitgreater:30%20rule.isdisabled:false%20action:allow:
         get:
             operationId: UnusedRulesPerDevice
             summary: Retrieve unused rules from a device based on the device id.
@@ -60,29 +61,6 @@ paths:
                                                 type: array
                 404:
                     description: Value is missing or not valid
-    /securetrack/api/devices/{deviceId}.json:
-        get:
-            operationId: UnusedRulesDeviceInformation
-            summary: Get device details based on the device id the way it is stored in SecureTrack.
-            parameters:
-                -   in: path
-                    name: deviceId
-                    required: true
-                    description: The device id to lookup for unused rules
-                    schema:
-                        type: string
-            responses:
-                200:
-                    description: OK
-    /securechangeworkflow/api/securechange/workflows/active_workflows.json?type=RULE_DECOMMISSION:
-        get:
-            operationId: RuleDecommissionWorkflows
-            summary: Rule decommission workflow list for mitigating security issues, such as disabling unused rules.
-            responses:
-                200:
-                    description: OK
-                400:
-                    description: <TYPE> is not a valid workflow type
 
 components:
     parameters:
