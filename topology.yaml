@@ -5,12 +5,8 @@ info:
     description: Path calculation results using TOS.
     version: 1.0.0
 
-servers:
-#    - url: https://tos-pilot.tufin.com
-    - url: https://4c46-108-20-176-8.ngrok-free.app
-
 paths:
-    /ms-copilot/securetrack/api/topology/path.json:
+    /securetrack/api/topology/path.json:
         get:
             operationId: topologyPath
             summary: Get path for specified traffic.
@@ -23,7 +19,7 @@ paths:
                     description: Path calculation results
                 400:
                     description: Value is missing or not valid
-    /ms-copilot/securetrack/api/devices/{deviceId}.json:
+    /securetrack/api/devices/{deviceId}.json:
         get:
             operationId: UnusedRulesDeviceInformation
             summary: Get device details based on the device id the way it is stored in SecureTrack.
