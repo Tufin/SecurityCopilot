@@ -6,7 +6,7 @@ Descriptor:
         -   Name: url
             Label: url
             Description: The URL of the instance to connect to
-            DefaultValue: "https://7789-108-20-176-8.ngrok-free.app/ms-copilot"
+            DefaultValue: "https://1ede-108-20-176-8.ngrok-free.app/ms-copilot"
             SettingType: String
             Required: true
     SupportedAuthTypes:
