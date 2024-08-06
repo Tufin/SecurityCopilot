@@ -6,7 +6,7 @@ info:
     version: 1.0.0
 
 paths:
-    /securechangeworkflow/api/securechange/workflows/active_workflows.json:
+    /securechangeworkflow/ipc/securechange/workflows/active_workflows.json:
         get:
             operationId: ActiveWorkflowList
             summary: Returns active workflow list defined in SecureChange.
@@ -15,7 +15,7 @@ paths:
                     description: OK
                 400:
                     description: <TYPE> is not a valid workflow type
-    /securechangeworkflow/api/securechange/workflows/active_workflows.json?type=ACCESS_REQUEST:
+    /securechangeworkflow/ipc/securechange/workflows/active_workflows.json?type=ACCESS_REQUEST:
         get:
             operationId: AccessRequestWorkflows
             summary: The Access-Request workflow can either allow or block traffic to a service from the source to the destination.
@@ -24,7 +24,7 @@ paths:
                     description: OK
                 400:
                     description: <TYPE> is not a valid workflow type
-    /securechangeworkflow/api/securechange/workflows/active_workflows.json?type=RULE_DECOMMISSION:
+    /securechangeworkflow/ipc/securechange/workflows/active_workflows.json?type=RULE_DECOMMISSION:
         get:
             operationId: RuleDecommissionWorkflows
             summary: Rule decommission workflow list for mitigating security issues, such as disabling unused rules.
