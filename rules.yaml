@@ -6,10 +6,17 @@ info:
     version: 1.0.0
 
 paths:
-    /securetrack/api/rule_search.json?lasthitgreater:30%20rule.isdisabled:false%20action:allow:
+    /securetrack/api/rule_search.json?lasthitgreater:{daysAgo}%20rule.isdisabled:false%20action:allow:
         get:
             operationId: UnusedRules
             summary: Shows the count of unused rules per device.
+            parameters:
+                -   in: path
+                    name: daysAgo
+                    required: true
+                    description: Number of days before the current day that consider the unused rules
+                    schema:
+                        type: integer
             responses:
                 200:
                     description: List of devices with an unused rule count per device.
