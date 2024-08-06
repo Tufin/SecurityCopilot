@@ -140,11 +140,11 @@ components:
     parameters:
         searchText:
             in: query
-            name: searchText
+            name: search_text
             required: true
             schema:
                 type: string
-                default: 'lasthitgreater:30%20rule.isdisabled:false%20action:allow'
+                default: 'lasthitgreater:{days}%20rule.isdisabled:false%20action:allow'
             allowEmptyValue: false
             allowReserved: true
         start:
