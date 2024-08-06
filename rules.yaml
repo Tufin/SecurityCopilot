@@ -6,7 +6,7 @@ info:
     version: 1.0.0
 
 paths:
-    /securetrack/api/rule_search.json?search_text={searchText}:
+    /securetrack/api/rule_search.json:
         get:
             operationId: UnusedRules
             summary: Shows the count of unused rules per device.
@@ -142,11 +142,16 @@ components:
             in: query
             name: search_text
             required: true
+            description: 'Query to search for rules. Example: "lasthitgreater:30 rule.isdisabled:false action:allow"'
             schema:
                 type: string
-                default: 'lasthitgreater:{days}%20rule.isdisabled:false%20action:allow'
+                default: 'lasthitgreater:{days} rule.isdisabled:false action:allow'
+                enum:
+                    - 'lasthitgreater:{days} rule.isdisabled:false action:allow'
             allowEmptyValue: false
             allowReserved: true
+            style: form
+            example: 'lasthitgreater:30 rule.isdisabled:false action:allow'
         start:
             in: query
             name: start
