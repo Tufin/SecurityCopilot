@@ -145,9 +145,14 @@ components:
             description: 'Query to search for rules. Example: "lasthitgreater:30 rule.isdisabled:false action:allow"'
             schema:
                 type: string
-                default: 'lasthitgreater:{days} rule.isdisabled:false action:allow'
+                default: 'lasthitgreater:30 rule.isdisabled:false action:allow'
                 enum:
-                    - 'lasthitgreater:{days} rule.isdisabled:false action:allow'
+                    - 'lasthitgreater:7 rule.isdisabled:false action:allow'
+                    - 'lasthitgreater:14 rule.isdisabled:false action:allow'
+                    - 'lasthitgreater:30 rule.isdisabled:false action:allow'
+                    - 'lasthitgreater:60 rule.isdisabled:false action:allow'
+                    - 'lasthitgreater:100 rule.isdisabled:false action:allow'
+                    - 'lasthitgreater:365 rule.isdisabled:false action:allow'
             allowEmptyValue: false
             allowReserved: true
             style: form
