@@ -14,9 +14,12 @@ SkillGroups:
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/topology.yaml
+            EndpointUrl: https://tmarelay4.azurewebsites.net/ms-copilot
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/workflow.yaml
+            EndpointUrl: https://tmarelay4.azurewebsites.net/ms-copilot
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/rules.yaml
+            EndpointUrl: https://tmarelay4.azurewebsites.net/ms-copilot

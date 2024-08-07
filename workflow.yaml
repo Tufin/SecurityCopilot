@@ -5,9 +5,6 @@ info:
     description: Path calculation results using TOS.
     version: 1.0.0
 
-servers:
-    -   url: https://tmarelay4.azurewebsites.net/ms-copilot
-
 paths:
     /securechangeworkflow/ipc/securechange/workflows/active_workflows.json:
         get:
