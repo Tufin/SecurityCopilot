@@ -2,13 +2,6 @@ Descriptor:
     Name: Tufin Firewall Management
     DisplayName: Tufin Firewall Management
     Description:  Get Information about your security network environment
-    Settings:
-        -   Name: url
-            Label: url
-            Description: The URL of the instance to connect to
-            DefaultValue: "https://tmarelay4.azurewebsites.net/ms-copilot"
-            SettingType: String
-            Required: true
     SupportedAuthTypes:
         - ApiKey
     Authorization:
@@ -21,12 +14,9 @@ SkillGroups:
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/topology.yaml
-            EndpointUrlSettingName: url
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/workflow.yaml
-            EndpointUrlSettingName: url
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/rules.yaml
-            EndpointUrlSettingName: url
