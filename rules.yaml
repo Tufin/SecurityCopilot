@@ -121,7 +121,7 @@ paths:
                     description: Value is missing or not valid
     /securetrack/api/rule_search/{deviceId}.json?violations.isempty:false:
         get:
-            operationId: PermissivenessLevelHighForDeviceId
+            operationId: ViolationsForDeviceId
             summary: Used to search for rules with violations on a specific device. By specifying the deviceId, it retrieves a list of rules associated with that device where the violations field is not empty
             parameters:
                 -   in: path
