@@ -60,7 +60,7 @@ paths:
                                                 type: array
                 404:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search.json?shadowed:true:
+    /securetrack/api/rule_search.json?search_text=shadowed:true:
         get:
             operationId: ShadowedRules
             summary: Returns rules that are shadowed
@@ -69,7 +69,7 @@ paths:
                     description: List of shadowed rules.
                 400:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search/{deviceId}.json?shadowed:true:
+    /securetrack/api/rule_search/{deviceId}.json?search_text=shadowed:true:
         get:
             operationId: ShadowedRulesForDeviceId
             summary: Returns rules that are shadowed for a device id
@@ -85,7 +85,7 @@ paths:
                     description: List of shadowed rules.
                 400:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search.json?permissiveness.level:high:
+    /securetrack/api/rule_search.json?search_text=permissiveness.level:high:
         get:
             operationId: PermissivenessLevelHigh
             summary: Returns rules with the high permissiveness level indicating how much traffic is allowed by the rule.
@@ -94,7 +94,7 @@ paths:
                     description: List of high permissiveness level rules.
                 400:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search/{deviceId}.json?permissiveness.level:high:
+    /securetrack/api/rule_search/{deviceId}.json?search_text=permissiveness.level:high:
         get:
             operationId: PermissivenessLevelHighForDeviceId
             summary: Returns rules for a device id that have high permissiveness level
@@ -110,7 +110,7 @@ paths:
                     description: List of high permissiveness level rules.
                 400:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search.json?violations.isempty:false:
+    /securetrack/api/rule_search.json?search_text=violations.isempty:false:
         get:
             operationId: Violations
             summary: Search for rules that have violations. It retrieves a list of rules where the violations field is not empty, indicating that these rules have been flagged for one or more issues.
@@ -119,7 +119,7 @@ paths:
                     description: List of high permissiveness level rules.
                 400:
                     description: Value is missing or not valid
-    /securetrack/api/rule_search/{deviceId}.json?violations.isempty:false:
+    /securetrack/api/rule_search/{deviceId}.json?search_text=violations.isempty:false:
         get:
             operationId: ViolationsForDeviceId
             summary: Used to search for rules with violations on a specific device. By specifying the deviceId, it retrieves a list of rules associated with that device where the violations field is not empty
