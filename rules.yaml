@@ -132,16 +132,16 @@ paths:
                         type: integer
             responses:
                 200:
-                    description: List of high permissiveness level rules.
+                    description: List of medium permissiveness level rules.
                 400:
                     description: Value is missing or not valid
     /securetrack/api/rule_search.json?search_text=permissiveness.level:low:
         get:
-            operationId: PermissivenessLevelMedium
-            summary: Returns rules with the medium permissiveness level indicating how much traffic is allowed by the rule.
+            operationId: PermissivenessLevelLow
+            summary: Returns rules with the low permissiveness level indicating how much traffic is allowed by the rule.
             responses:
                 200:
-                    description: List of medium permissiveness level rules.
+                    description: List of low permissiveness level rules.
                 400:
                     description: Value is missing or not valid
     /securetrack/api/rule_search/{deviceId}.json?search_text=permissiveness.level:low:
@@ -157,7 +157,7 @@ paths:
                         type: integer
             responses:
                 200:
-                    description: List of high permissiveness level rules.
+                    description: List of low permissiveness level rules.
                 400:
                     description: Value is missing or not valid
     /securetrack/api/rule_search.json?search_text=violations.isempty:false:
