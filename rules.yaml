@@ -110,6 +110,56 @@ paths:
                     description: List of high permissiveness level rules.
                 400:
                     description: Value is missing or not valid
+    /securetrack/api/rule_search.json?search_text=permissiveness.level:medium:
+        get:
+            operationId: PermissivenessLevelMedium
+            summary: Returns rules with the medium permissiveness level indicating how much traffic is allowed by the rule.
+            responses:
+                200:
+                    description: List of medium permissiveness level rules.
+                400:
+                    description: Value is missing or not valid
+    /securetrack/api/rule_search/{deviceId}.json?search_text=permissiveness.level:medium:
+        get:
+            operationId: PermissivenessLevelMediumForDeviceId
+            summary: Returns rules for a device id that have medium permissiveness level
+            parameters:
+                -   in: path
+                    name: deviceId
+                    required: true
+                    description: The device id to lookup for medium permissiveness level rules
+                    schema:
+                        type: integer
+            responses:
+                200:
+                    description: List of high permissiveness level rules.
+                400:
+                    description: Value is missing or not valid
+    /securetrack/api/rule_search.json?search_text=permissiveness.level:low:
+        get:
+            operationId: PermissivenessLevelMedium
+            summary: Returns rules with the medium permissiveness level indicating how much traffic is allowed by the rule.
+            responses:
+                200:
+                    description: List of medium permissiveness level rules.
+                400:
+                    description: Value is missing or not valid
+    /securetrack/api/rule_search/{deviceId}.json?search_text=permissiveness.level:low:
+        get:
+            operationId: PermissivenessLevelLowForDeviceId
+            summary: Returns rules for a device id that have low permissiveness level
+            parameters:
+                -   in: path
+                    name: deviceId
+                    required: true
+                    description: The device id to lookup for low permissiveness level rules
+                    schema:
+                        type: integer
+            responses:
+                200:
+                    description: List of high permissiveness level rules.
+                400:
+                    description: Value is missing or not valid
     /securetrack/api/rule_search.json?search_text=violations.isempty:false:
         get:
             operationId: Violations
@@ -135,7 +185,6 @@ paths:
                     description: List of high permissiveness level rules.
                 400:
                     description: Value is missing or not valid
-
 
 components:
     parameters:
