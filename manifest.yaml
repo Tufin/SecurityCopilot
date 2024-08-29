@@ -1,6 +1,6 @@
 Descriptor:
-    Name: Tufin Firewall Management
-    DisplayName: Tufin Firewall Management
+    Name: TufinMate
+    DisplayName: TufinMate
     Description:  Get Information about your security network environment
     SupportedAuthTypes:
         - ApiKey
