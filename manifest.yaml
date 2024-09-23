@@ -1,7 +1,7 @@
 Descriptor:
     Name: TufinMate
     DisplayName: TufinMate
-    Description:  Get Information about your security network environment
+    Description: Get information about your network environment from Tufin.
     SupportedAuthTypes:
         - ApiKey
     Authorization:
