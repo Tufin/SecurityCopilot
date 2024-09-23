@@ -10,6 +10,10 @@ paths:
         get:
             operationId: UnusedRules
             summary: Shows the count of unused rules per device.
+            description: |
+                Retrieve information of unused rules for all devices.
+                #ExamplePrompts How many rules are unused?
+                #ExamplePrompts Show how many rules are unused for the past 60 days?
             parameters:
                 -   $ref: '#/components/parameters/searchText'
             responses:
@@ -31,6 +35,11 @@ paths:
         get:
             operationId: UnusedRulesPerDevice
             summary: Retrieve unused rules from a device based on the device id.
+            description: |
+                Retrieve information of unused rules for a device id.
+                #ExamplePrompts How many unused rules for device id number 195?
+                #ExamplePrompts Show how many rules are unused for the past 60 days for device id 1?
+                #ExamplePrompts Does the device 195 have any rules with no hits in the past 90 days?
             parameters:
                 -   in: path
                     name: deviceId
@@ -64,6 +73,11 @@ paths:
         get:
             operationId: ShadowedRules
             summary: Returns rules that are shadowed
+            description: |
+                Retrieve information of unused rules for a device id.
+                #ExamplePrompts How many rules are shadowed?
+                #ExamplePrompts List all devices with shadowed rules?
+                #ExamplePrompts How many redundant rules are there?
             responses:
                 200:
                     description: List of shadowed rules.
@@ -73,6 +87,10 @@ paths:
         get:
             operationId: ShadowedRulesForDeviceId
             summary: Returns rules that are shadowed for a device id
+            description: |
+                Retrieve information of shadowed rules for a device id.
+                #ExamplePrompts how many shadowed rules are there for device 187?
+                #ExamplePrompts Are there shadowed rules for device 187?
             parameters:
                 -   in: path
                     name: deviceId
@@ -89,6 +107,10 @@ paths:
         get:
             operationId: PermissivenessLevelHigh
             summary: Returns rules with the high permissiveness level indicating how much traffic is allowed by the rule.
+            description: |
+                Retrieve information of highly permissive rules.
+                #ExamplePrompts Find all high permissive rules?
+                #ExamplePrompts Are there any high permissive rules?
             responses:
                 200:
                     description: List of high permissiveness level rules.
@@ -98,6 +120,9 @@ paths:
         get:
             operationId: PermissivenessLevelHighForDeviceId
             summary: Returns rules for a device id that have high permissiveness level
+            description: |
+                Retrieve information of highly permissive rules for device id.
+                #ExamplePrompts What are the highly permissive rules for device id 195?
             parameters:
                 -   in: path
                     name: deviceId
@@ -114,6 +139,10 @@ paths:
         get:
             operationId: PermissivenessLevelMedium
             summary: Returns rules with the medium permissiveness level indicating how much traffic is allowed by the rule.
+            description: |
+                Retrieve information of medium permissive rules.
+                #ExamplePrompts Find all medium permissive rules?
+                #ExamplePrompts Are there any medium permissive rules?
             responses:
                 200:
                     description: List of medium permissiveness level rules.
@@ -123,6 +152,9 @@ paths:
         get:
             operationId: PermissivenessLevelMediumForDeviceId
             summary: Returns rules for a device id that have medium permissiveness level
+            description: |
+                Retrieve information of medium permissive rules for device id.
+                #ExamplePrompts What are the medium permissive rules for device id 195?
             parameters:
                 -   in: path
                     name: deviceId
@@ -139,6 +171,10 @@ paths:
         get:
             operationId: PermissivenessLevelLow
             summary: Returns rules with the low permissiveness level indicating how much traffic is allowed by the rule.
+            description: |
+                Retrieve information of low permissive rules.
+                #ExamplePrompts Find all low permissive rules?
+                #ExamplePrompts Are there any low permissive rules?
             responses:
                 200:
                     description: List of low permissiveness level rules.
@@ -148,6 +184,9 @@ paths:
         get:
             operationId: PermissivenessLevelLowForDeviceId
             summary: Returns rules for a device id that have low permissiveness level
+            description: |
+                Retrieve information of low permissive rules for device id.
+                #ExamplePrompts What are the low permissive rules for device id 195?
             parameters:
                 -   in: path
                     name: deviceId
@@ -164,6 +203,10 @@ paths:
         get:
             operationId: Violations
             summary: Search for rules that have violations. It retrieves a list of rules where the violations field is not empty, indicating that these rules have been flagged for one or more issues.
+            description: |
+                Retrieve information of violating rules.
+                #ExamplePrompts Find all violating rules?
+                #ExamplePrompts Find rules with violations?
             responses:
                 200:
                     description: List of high permissiveness level rules.
@@ -173,6 +216,9 @@ paths:
         get:
             operationId: ViolationsForDeviceId
             summary: Used to search for rules with violations on a specific device. By specifying the deviceId, it retrieves a list of rules associated with that device where the violations field is not empty
+            description: |
+                Retrieve information of violating rules on a specific device.
+                #ExamplePrompts From device 157, which rules violate security policies?
             parameters:
                 -   in: path
                     name: deviceId

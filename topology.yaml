@@ -10,6 +10,11 @@ paths:
         get:
             operationId: topologyPath
             summary: Get path for specified traffic.
+            description: |
+                Retrieve information of network access status.
+                #ExamplePrompts Find traffic from source IP 10.1.0.0/24 to destination 10.1.3.0/24 with service HTTP
+                #ExamplePrompts Can 118.25.6.39 access 10.200.10.1 using any service? 
+                #ExamplePrompts Check if traffic allow between 192.168.1.1 and 10.100.35.1?
             parameters:
                 -   $ref: '#/components/parameters/src'
                 -   $ref: '#/components/parameters/dst'
@@ -23,6 +28,9 @@ paths:
         get:
             operationId: UnusedRulesDeviceInformation
             summary: Get device details based on the device id the way it is stored in SecureTrack.
+            description: |
+                Retrieve information about device using the device id.
+                #ExamplePrompts Can you provide some details about device id 1 using the Tufin Firewall Management plugin?
             parameters:
                 -   in: path
                     name: deviceId
