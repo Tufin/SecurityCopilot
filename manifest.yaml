@@ -14,12 +14,12 @@ SkillGroups:
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/topology.yaml
-            EndpointUrl: https://chatbot.stg.tufin.io/ms-copilot
+            EndpointUrl: https://chatbot.tufin.com/ms-copilot
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/workflow.yaml
-            EndpointUrl: https://chatbot.stg.tufin.io/ms-copilot
+            EndpointUrl: https://chatbot.tufin.com/ms-copilot
     -   Format: API
         Settings:
             OpenApiSpecUrl: https://raw.githubusercontent.com/Tufin/SecurityCopilot/master/rules.yaml
-            EndpointUrl: https://chatbot.stg.tufin.io/ms-copilot
+            EndpointUrl: https://chatbot.tufin.com/ms-copilot
